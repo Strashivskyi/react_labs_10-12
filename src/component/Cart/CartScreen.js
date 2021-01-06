@@ -15,7 +15,6 @@ const CartScreen = () => {
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
 
-  useEffect(() => {}, []);
 
   const qtyChangeHandler = (id, qty) => {
     dispatch(addToCart(id, qty));
@@ -33,8 +32,7 @@ const CartScreen = () => {
 
   const getCartSubTotal = () => {
     return cartItems
-      .reduce((price, item) => price + item.price * item.qty, 0)
-      .toFixed(2);
+      .reduce((price, item) => price + item.price * item.qty, 0);
   };
 
   return (
@@ -69,7 +67,7 @@ const CartScreen = () => {
           </div>
           <div className="buttons">
           <Link to={'/products'}><StyledButton type="text" shape="round" className="left_button">Back to Catalog</StyledButton></Link>;
-          <Link to={'/products'}><StyledButton type="text" shape="round">Proceed and Checkout</StyledButton></Link>;
+          <Link to={'/form'}><StyledButton type="text" shape="round">Proceed and Checkout</StyledButton></Link>;
           </div>
 
 

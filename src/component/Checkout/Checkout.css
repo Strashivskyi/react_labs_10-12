@@ -1,0 +1,15 @@
+.form{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 30vw;
+    margin-right: 30vw;
+    margin-top: 13vh;
+    margin-bottom: auto;
+    background-color: grey;
+    padding: 40px;
+    border-radius: 10px;
+}
+.largeSpace{
+    height: 24vh;
+}
