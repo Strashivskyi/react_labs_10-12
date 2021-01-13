@@ -2,13 +2,14 @@ import styled from 'styled-components';
 
 export const NewHeader = styled.div`
     display: flex;
+    margin-right: -500px;
     align-items: center;
     padding: 15px 0;
     background-color: #f8f8f8;
     height: auto;
     line-height: 1.6;
     position: relative;
-    padding-left: 200px;
+    padding-left: 300px;
     margin-left: -200px;
     width: 150%;
     color: #680300 !important;
@@ -99,3 +100,4 @@ export const NewHeader = styled.div`
     
 `;
 export default NewHeader; 
+

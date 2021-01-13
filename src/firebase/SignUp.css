@@ -1,0 +1,59 @@
+.signup_input input{
+    color: #222222;
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 3px solid grey;
+  background-color: transparent;
+  font-weight: 400;
+  font-size: 22px;
+}
+.singup-form{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5vw;
+    padding: 30px;
+    margin-left: 30vw;
+    margin-right: 30vw;
+    background-color: #f8f8f8;
+    margin-top: 10vh;
+}
+.signup_text{
+    padding-top: 20px;
+    color: #680300;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 700;
+    text-transform: uppercase;
+
+}
+.signup_button{
+    background-color:  #680300;
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+    margin-top: 15px;
+    border: none;
+}
+.already_member_flex_container{
+    display: flex;
+    flex-direction: row;
+text-align: center;
+margin-left: 26%;
+margin-right: 26%;
+padding-top: 20px;
+}
+.from_signup_to_login{
+    color: #7e4745;
+    text-decoration: none;
+    font-size: 18px;
+}
+.from_signup_to_login:hover {
+    color: #680300;
+  }
+  
+.from_signup_to_login:active {
+    color: #680300;
+}

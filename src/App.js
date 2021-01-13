@@ -10,10 +10,12 @@ import HomeScreen from "./component/Catalog/ProductsContainer";
 import CartScreen from "./component/Cart/CartScreen";
 import Checkout from "./component/Checkout/Checkout";
 import Success from "./component/Checkout/Success";
-
-
+import Login from "./firebase/Login"
+import SignUp from "./firebase/SignUp"
 import { BrowserRouter as Router, Route } from "react-router-dom";
-
+import AuthProvider from "./firebase/AuthSetup/Auth"
+import PrivateRouteToLogin from "./firebase/AuthSetup/PrivateRouteToLogin";
+import PrivateRouteToSignUp from "./firebase/AuthSetup/PrivateRouteToSignUp";
 
 
 
@@ -21,24 +23,28 @@ const { Header, Content} = Layout;
 
 function App() {
   return (
+   <AuthProvider>
    <Router>
    <Layout>
    <Header>
       <AppHeader/>
    </Header>
-   <Content className="content"> 
-      <Route exact path="/" component={Home} />
-      <Route exact path="/products/:id" component={SingleProductInfo} />
-      <Route exact path="/products" component={HomeScreen} />
-      <Route exact path="/cart" component={CartScreen} />
-      <Route exact path="/form" component={Checkout} />
-      <Route exact path="/success" component={Success} />
-
+   <Content className="content">
+      <PrivateRouteToLogin exact path="/home" component={Home} />
+      <PrivateRouteToLogin exact path="/products/:id" component={SingleProductInfo} />
+      <PrivateRouteToLogin exact path="/products" component={HomeScreen} />
+      <PrivateRouteToLogin exact path="/cart" component={CartScreen} />
+      <PrivateRouteToLogin exact path="/form" component={Checkout} />
+      <PrivateRouteToLogin exact path="/success" component={Success} />
+      <Route exact path="/" component={Login} />
+      <PrivateRouteToSignUp exact path="/signup" component={SignUp} />
    </Content>
   <Footer/>
   <CopyrightText/>
  </Layout>
  </Router>
+ </AuthProvider>
+
   );
 
 }

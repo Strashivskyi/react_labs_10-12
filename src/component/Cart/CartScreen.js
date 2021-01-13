@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import "./CartScreen.css";
@@ -11,7 +10,7 @@ import { addToCart, removeFromCart } from "../../redux/actions/cartActions";
 
 const CartScreen = () => {
   const dispatch = useDispatch();
-
+  
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
 
